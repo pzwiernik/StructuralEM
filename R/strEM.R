@@ -11,7 +11,7 @@
 #' N <- 30 # sample size
 #' Ttr <- rtree(m,rooted=FALSE,br=rep(-log(.6),7))
 #' Ttr$tip.label <- 1:m # label leaves by 1:m
-#' Str <- get.corr0(Ttr) 
+#' Str <- get.corr0(Ttr)
 #' Rtr <- Str[1:m,1:m]
 #' dat <- mvrnorm(N, rep(0,m), Rtr)
 #' D <- get.dist(cor(dat))
@@ -21,9 +21,6 @@
 
 
 strEM <- function(dat,T0,tol=1e-7){
-  require(MASS)
-  require(ape)
-  require(igraph)
   S0 <- get.corr0(T0)
   m <- length(T0$tip.label)
   R0 <- S0[1:m,1:m]

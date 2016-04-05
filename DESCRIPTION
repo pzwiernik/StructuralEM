@@ -11,5 +11,5 @@ LazyData: TRUE
 Imports:
     ape,
     igraph,
-Suggests:
     MASS,
+
