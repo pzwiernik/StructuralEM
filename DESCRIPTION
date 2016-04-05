@@ -1,10 +1,15 @@
 Package: StructuralEM
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Structural EM Algorithm for Gaussian Latent Tree Models
 Version: 0.1
 Date: 2016-04-05
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
+Author: Piotr Zwiernik
+Maintainer: Piotr Zwiernik <piotr.zwiernik@gmail.com>
 Description: More about what it does (maybe more than one line)
 License: What license is it under?
 LazyData: TRUE
+Imports:
+    ape,
+    igraph,
+Suggests:
+    MASS,
