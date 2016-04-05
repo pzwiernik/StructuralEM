@@ -5,7 +5,7 @@ get.binary <- function(T){
   # By construction, this tree gives the same observed likelihood as the input tree.
 
   # First remove red leaves
-  T<- delete.vertices(T,((igraph::V(T)$color=="red")*(degree(T)==1)==1))
+  T<- igraph::delete.vertices(T,((igraph::V(T)$color=="red")*(igraph::degree(T)==1)==1))
   #   while (is.binary(T,1)==0) {
   #     # expand degree two observed nodes
   #     T <- expand.bad.nodes(T)
