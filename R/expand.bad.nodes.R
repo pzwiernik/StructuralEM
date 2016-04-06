@@ -1,15 +1,16 @@
+#' Expands high degree nodes into many ternary nodes.
+#'
+#' This function takes all inner nodes of degree more than 4
+# and replaces them with a small binary tree. In the current implementation every high degree node is replaced with a chain.
+# In this way this step of the procedure is quick and we can attack bigger trees.
+#
+#' @param T A tree
+#' @keywords structural EM algorithm
+#' @export
+#' @examples
+#'
+#'
 expand.bad.nodes <- function(T) {
-  # this function takes all inner nodes of degree more than 4
-  # and replaces them with a small binary tree (for details see the notes)
-  # NOTE: implement Caroline's comment about joining close neighbors first
-
-  # NOTE 2: in the current implementation every high degree node is replaced with a chain.
-  # In this way this step of the procedure is quick and we can attack bigger trees.
-  # I think that the iterative procedure makes no sense because it's expensive -
-  # maybe there is something smarter to do?? The current procedure works reasonably well.
-  # But maybe upon convergence we could run couple of more steps in the more expensive implementation?
-
-
   eps <- 1e-12
   for (v in as.vector(igraph::V(T))[(igraph::degree(T)>=4)==1]) {
     d <- igraph::degree(T)[v]

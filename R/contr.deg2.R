@@ -1,6 +1,7 @@
-#'  CONTRACT DEGREE TWO NODES
+#'  Contract degree two nodes
 #'
-#' This is an auxiliary function that...
+#' This is an internal function that is used in the M-step to output a binary tree. It contracts degree two nodes
+#' that do not correspond to observed variables.
 #' @param T a tree
 #' @keywords Gaussian phylogenetic trees, Chow-Liu algortihm
 #' @export

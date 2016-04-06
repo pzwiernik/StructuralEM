@@ -1,9 +1,15 @@
+#' Get a binary tree
+#'
+#' This function takes the tree (of class 'igraph') output by the Chow-Liu algorithm and outputs a binary tree with the
+#' same observed likelihood.
+#
+#' @param T A tree
+#' @keywords structural EM algorithm
+#' @export
+#' @examples
+#'
+#'
 get.binary <- function(T){
-  # this function takes the tree (of class 'igraph') outputed by the chow-liu alg
-  # and corrects it. Rememeber that observed nodes are green and hidden nodes are red.
-  # The task is to obtain a binary tree with green leaves and red inner nodes.
-  # By construction, this tree gives the same observed likelihood as the input tree.
-
   # First remove red leaves
   T<- igraph::delete.vertices(T,((igraph::V(T)$color=="red")*(igraph::degree(T)==1)==1))
   #   while (is.binary(T,1)==0) {

@@ -1,11 +1,12 @@
-#' A Cat Function
+#' Chow-liu algorithm
 #'
-#' This function allows you to express your love of cats.
-#' @param love Do you love cats? Defaults to TRUE.
-#' @keywords cats
+#' This internal function finds the maximum likelihood tree over a set of observed variables.
+#' It outputs the minimum cost spanning tree on the set of correlations.
+#' @param S correlation matrix
+#' @keywords Chow-Liu
 #' @export
 #' @examples
-#' cat_function()
+#'
 #'
 
 chow.liu <- function(S){
