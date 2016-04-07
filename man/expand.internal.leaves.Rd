@@ -11,6 +11,8 @@ expand.internal.leaves(T)
 }
 \description{
 This function moves all observed (green) inner nodes outside.
+This is done by replacing any such node with an unobserved (red) copy which is
+zero length apart.
 }
 \examples{
 

@@ -11,6 +11,8 @@ expand.bad.nodes(T)
 }
 \description{
 This function takes all inner nodes of degree more than 4
+and replaces them with a small binary tree. In the current implementation every high degree node is replaced with a chain.
+In this way this step of the procedure is quick and we can attack bigger trees.
 }
 \examples{
 
