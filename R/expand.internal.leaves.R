@@ -1,9 +1,9 @@
 #' Moves internal nodes that represent observed variables to a leaf node.
 #'
 #' This function moves all observed (green) inner nodes outside.
-# This is done by replacing any such node with an unobserved (red) copy which is
-# zero length apart.
-#
+#' This is done by replacing any such node with an unobserved (red) copy which is
+#' zero length apart.
+#'
 #' @param T A tree
 #' @keywords structural EM algorithm
 #' @export

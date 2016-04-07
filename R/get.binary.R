@@ -2,7 +2,7 @@
 #'
 #' This function takes the tree (of class 'igraph') output by the Chow-Liu algorithm and outputs a binary tree with the
 #' same observed likelihood.
-#
+#'
 #' @param T A tree
 #' @keywords structural EM algorithm
 #' @export
