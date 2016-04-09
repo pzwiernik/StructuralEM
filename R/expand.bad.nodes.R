@@ -17,7 +17,7 @@ expand.bad.nodes <- function(T) {
     for (i in 1:(d-3)) T <- T + igraph::vertex(color="red");
     # we treat differently the degree 4 and degree >4 case
     if (d>4){
-      ws <- igraph::V(T)[(igraph::degree(T)==0)==1]
+      ws <- as.vector(igraph::V(T))[(igraph::degree(T)==0)==1]
       nv <- T[[v,]][[1]]
       T[ws[[1]],v] <- eps
       for (i in 1:(d-4)) {

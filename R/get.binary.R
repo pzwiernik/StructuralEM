@@ -12,10 +12,6 @@
 get.binary <- function(T){
   # First remove red leaves
   T<- igraph::delete.vertices(T,((igraph::V(T)$color=="red")*(igraph::degree(T)==1)==1))
-  #   while (is.binary(T,1)==0) {
-  #     # expand degree two observed nodes
-  #     T <- expand.bad.nodes(T)
-  #   }
 
   #   Second, move internal green nodes outside
   T <- expand.internal.leaves(T)
